@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System – JSON Based</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1>Book Management System</h1>
+            <p class="subtitle">JSON Based Client-Side Application</p>
+        </header>
+
+        <!-- Message Area -->
+        <div id="messageArea" class="message-area hidden" role="alert" aria-live="assertive">
+            <p id="messageText"></p>
+        </div>
+
+        <!-- Book Display Section -->
+        <section class="book-display card">
+            <h2>Current Book Directory</h2>
+            <div class="table-responsive">
+                <table id="bookTable">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Year</th>
+                            <th>Genre</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookTableBody">
+                        <!-- Rows populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="actions-grid">
+            <!-- Update Book Section -->
+            <section class="form-section card">
+                <h2>Update Book Record</h2>
+                <form id="updateForm">
+                    <div class="form-group">
+                        <label for="updateTitle">Target Title (case-insensitive match)</label>
+                        <input type="text" id="updateTitle" placeholder="e.g. 1984">
+                    </div>
+                    <div class="form-group">
+                        <label for="updateAuthor">New Author</label>
+                        <input type="text" id="updateAuthor" placeholder="e.g. George Orwell">
+                    </div>
+                    <div class="form-group">
+                        <label for="updateYear">New Year</label>
+                        <input type="number" id="updateYear" placeholder="e.g. 1949">
+                    </div>
+                    <div class="form-group">
+                        <label for="updateGenre">New Genre</label>
+                        <input type="text" id="updateGenre" placeholder="e.g. Dystopian">
+                    </div>
+                    <button type="button" id="btnUpdateBook" class="btn btn-primary">Update Book</button>
+                </form>
+            </section>
+
+            <!-- Remove Book Section -->
+            <section class="form-section card">
+                <h2>Remove Book Record</h2>
+                <form id="removeForm">
+                    <div class="form-group">
+                        <label for="removeTitle">Title to Remove</label>
+                        <input type="text" id="removeTitle" placeholder="Enter title to remove">
+                    </div>
+                    <button type="button" id="btnRemoveBook" class="btn btn-danger">Remove Book</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
